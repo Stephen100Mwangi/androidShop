@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MiniShop"
+        android:padding="20dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@+id/mini"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/mini">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="ITEM"
+            android:id="@+id/ITEM"
+            />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="PRICE"
+            android:layout_toEndOf="@+id/ITEM"
+            android:layout_marginStart="40dp"
+            android:id="@+id/PRICE"
+            />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="VAT 16%"
+            android:id="@+id/VAT"
+            android:layout_toEndOf="@+id/PRICE"
+            android:layout_marginStart="40dp"
+            />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="ACTUAL PRICE"
+            android:layout_toEndOf="@+id/VAT"
+            android:layout_marginStart="40dp"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/milk"
+        android:layout_below="@id/title"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="MILK"
+            android:textSize="16sp"
+            android:id="@+id/buyMilk"
+            />
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="30dp"
+            android:id="@+id/milkPrice"
+            android:editable="false"
+            android:textSize="12sp"
+            android:text="168.00"
+            android:layout_toEndOf="@id/buyMilk"
+            />
+
+        <EditText
+            android:id="@+id/milkVAT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_toEndOf="@id/milkPrice"
+            android:editable="false"
+            android:text="32.00"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/milkACTUAL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_toEndOf="@id/milkVAT"
+            android:editable="false"
+            android:text="200.00"
+            android:textSize="12sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/sugar"
+        android:layout_below="@id/milk"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="SUGAR"
+            android:textSize="16sp"
+            android:id="@+id/buySugar"
+            />
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@+id/buySugar"
+            android:layout_marginStart="30dp"
+            android:id="@+id/sugarPrice"
+            android:textSize="12sp"
+            android:editable="false"
+            android:text="2940.00"
+            />
+
+        <EditText
+            android:id="@+id/sugarVAT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="31dp"
+            android:layout_toEndOf="@+id/sugarPrice"
+            android:editable="false"
+            android:text="560.00"
+            android:textSize="12sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_toEndOf="@+id/sugarVAT"
+            android:editable="false"
+            android:text="3500.00"
+            android:textSize="12sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/flour"
+        android:layout_below="@id/sugar"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="FLOUR"
+            android:textSize="16sp"
+            android:id="@+id/buyFlour"
+            />
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@+id/buyFlour"
+            android:id="@+id/flourPrice"
+            android:layout_marginStart="30dp"
+            android:textSize="12sp"
+            android:editable="false"
+            android:text="1890.00"
+            />
+
+        <EditText
+            android:id="@+id/flourVAT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_toEndOf="@+id/flourPrice"
+            android:text="360.00"
+            android:editable="false"
+            android:textSize="12sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_toEndOf="@+id/flourVAT"
+            android:text="2250.00"
+            android:editable="false"
+            android:textSize="12sp"
+            android:inputType="number" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/bread"
+        android:layout_below="@id/flour"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="BREAD"
+            android:textSize="16sp"
+            android:id="@+id/buyBread"
+            />
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@+id/buyBread"
+            android:layout_marginStart="30dp"
+            android:textSize="12sp"
+            android:id="@+id/breadPrice"
+            android:text="100.80"
+            android:editable="false"
+            />
+
+        <EditText
+            android:id="@+id/breadVAT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_toEndOf="@+id/breadPrice"
+            android:editable="false"
+            android:text="19.20"
+            android:textSize="12sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="57dp"
+            android:layout_toEndOf="@+id/breadVAT"
+            android:editable="false"
+            android:text="120.00"
+            android:textSize="12sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/total"
+        android:layout_below="@id/bread"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="GRAND TOTAL"
+            android:textSize="16sp"
+            android:id="@+id/grandTotal"
+            />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/totalCost"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/grandTotal"
+            android:inputType="number"
+            android:editable="false"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/discount"
+        android:layout_below="@id/total"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="DISCOUNT 15%"
+            android:textSize="16sp"
+            android:id="@+id/getDiscount"
+            />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:id="@+id/totalDiscount"
+            android:layout_toEndOf="@+id/getDiscount"
+            android:inputType="number"
+            android:editable="false"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/netPay"
+        android:layout_below="@id/discount"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="NET PAY"
+            android:textSize="16sp"
+            android:id="@+id/getNetPay"
+            />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_toEndOf="@+id/getNetPay"
+            android:editable="false"
+            android:id="@+id/totalNet"
+            android:inputType="number"
+            android:textColor="#fffef0"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
